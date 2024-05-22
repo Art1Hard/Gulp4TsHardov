@@ -6,7 +6,6 @@ import terser from "gulp-terser";
 import sourceMaps from "gulp-sourcemaps";
 
 export const ts = () => {
-
 	return browserify({
 		basedir: ".",
 		debug: true,

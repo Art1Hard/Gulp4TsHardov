@@ -1,5 +1,5 @@
 {
-	"name": "hadrovgulp",
+	"name": "hardovgulp",
 	"version": "1.0.0",
 	"description": "",
 	"main": "gulpfile.js",
@@ -50,8 +50,6 @@
 		"vinyl-buffer": "^1.0.1",
 		"vinyl-ftp": "^0.6.1",
 		"vinyl-source-stream": "^2.0.0",
-		"webp-converter": "2.2.3",
-		"webpack": "^5.91.0",
-		"webpack-stream": "^7.0.0"
+		"webp-converter": "2.2.3"
 	}
 }
