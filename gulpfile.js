@@ -22,7 +22,7 @@ import { images } from "./gulp/tasks/images.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
 import { scss } from "./gulp/tasks/scss.js";
-import { js } from "./gulp/tasks/js.js";
+import { ts } from "./gulp/tasks/ts.js";
 import { sprite } from "./gulp/tasks/sprite.js";
 import { zip } from "./gulp/tasks/zip.js";
 import { ftp } from "./gulp/tasks/ftp.js";
@@ -32,7 +32,7 @@ function watcher() {
 	gulp.watch(path.watch.images, images);
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.scss, scss);
-	gulp.watch(path.watch.js, js);
+	gulp.watch(path.watch.ts, ts);
 	gulp.watch(path.watch.sprite, sprite);
 	gulp.watch(path.watch.interactivesprite, sprite);
 }
@@ -43,8 +43,7 @@ export { toDash, deleteOtfFont }
 
 // * Построение сценариев
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle); // * Построение шрифтов
-
-const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, images, sprite));
+const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, ts, images, sprite));
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);

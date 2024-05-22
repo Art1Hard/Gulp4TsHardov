@@ -1,0 +1,10 @@
+{
+	"include": [
+		"src/ts/modules/*",
+		"src/ts/*"
+	],
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"target": "es5"
+	}
+}
